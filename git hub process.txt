@@ -1,0 +1,225 @@
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~
+$ cd Desktop
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop
+$ mkdir git-basic-june-2019
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop
+$ cd git-basic-june-2019
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019
+$ cd ..
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop
+$ git
+git.exe                 gitk                    git-receive-pack.exe
+git-flow                gitk.exe                git-upload-archive.exe
+git-gui.exe             git-lfs.exe             git-upload-pack.exe
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop
+$ cd git-basic-june-2019
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019
+$ git init
+Initialized empty Git repository in C:/Users/IIIT-rgukt/Desktop/git-basic-june-2019/.git/
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ ls -a
+./  ../  .git/
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git config user.name "mahidhar"
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git config user.email prasannamahidhar@gmail.com
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git config user.name
+mahidhar
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git config user.email
+prasannamahidhar@gmail.com
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git remote add git-basics-june-2019 https://github.com/Mahidhar218/git-basic-june-2019
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git remote -v
+git-basics-june-2019    https://github.com/Mahidhar218/git-basic-june-2019 (fetch)
+git-basics-june-2019    https://github.com/Mahidhar218/git-basic-june-2019 (push)
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git pull git-basics-june-2019 master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Mahidhar218/git-basic-june-2019
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> git-basics-june-2019/master
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ ls
+README.md
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ touch textfile.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ ls
+README.md  textfile.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        textfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git add *.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   textfile.txt
+
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git commit -m "add new text file"
+[master 282d43c] add new text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 textfile.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git log
+commit 282d43cdb25f2f4b0574dbca6462035483dcd37a (HEAD -> master)
+Author: mahidhar <prasannamahidhar@gmail.com>
+Date:   Thu Jun 6 12:32:21 2019 +0530
+
+    add new text file
+
+commit 6cffec8703bd9768ef5b50fe2679ec616384413e (git-basics-june-2019/master)
+Author: Mahidhar218 <49971421+Mahidhar218@users.noreply.github.com>
+Date:   Thu Jun 6 12:07:13 2019 +0530
+
+    Initial commit
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ ls
+README.md  textfile.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git push -u git-basics-june-2019 master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 70.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Mahidhar218/git-basic-june-2019
+   6cffec8..282d43c  master -> master
+Branch 'master' set up to track remote branch 'master' from 'git-basics-june-2019'.
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ echo "Student rolll call ,marks" >> textfile.txt
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git status
+On branch master
+Your branch is up to date with 'git-basics-june-2019/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   textfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git commit -m "second verssion"
+On branch master
+Your branch is up to date with 'git-basics-june-2019/master'.
+
+Changes not staged for commit:
+        modified:   textfile.txt
+
+no changes added to commit
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git add *.txt
+warning: LF will be replaced by CRLF in textfile.txt.
+The file will have its original line endings in your working directory
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git status
+On branch master
+Your branch is up to date with 'git-basics-june-2019/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   textfile.txt
+
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git push -u git-basics-june-2019 master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'git-basics-june-2019'.
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ cat textfile.txt
+Student rolll call ,marks
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git commit -m "second verssion2"
+[master 3bdef92] second verssion2
+ 1 file changed, 1 insertion(+)
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$ git push -u git-basics-june-2019 master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 9.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Mahidhar218/git-basic-june-2019
+   282d43c..3bdef92  master -> master
+Branch 'master' set up to track remote branch 'master' from 'git-basics-june-2019'.
+
+IIIT-rgukt@DESKTOP-OQDEQH1 MINGW64 ~/Desktop/git-basic-june-2019 (master)
+$
